@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "card-counter",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
