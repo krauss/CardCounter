@@ -12,7 +12,7 @@ import {
   IonButton,
   IonChip,
   IonIcon } from '@ionic/react';
-import { checkmark, close } from 'ionicons/icons';
+import { checkmark, close, skull } from 'ionicons/icons';
 import React from 'react';
 import Card from '../components/Card';
 import './Home.css';
@@ -46,7 +46,7 @@ class Home extends React.Component {
       <IonPage>
         <IonHeader>
           <IonToolbar color="dark">
-            <IonTitle className="ion-text-center"><b>Card Counter</b></IonTitle>
+            <IonTitle className="ion-text-center"><IonIcon icon={skull} /><b>  BlackJack Card Counter  </b><IonIcon icon={skull} /></IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent color="light">
@@ -87,9 +87,9 @@ class Home extends React.Component {
 
               <IonRow>
                 <IonCol size="3"><Card onClick={() => this.handleClickInc()} card_value="6"/></IonCol>              
-                <IonCol size="3"><Card card_value="7"/></IonCol>
-                <IonCol size="3"><Card card_value="8"/></IonCol>
-                <IonCol size="3"><Card card_value="9"/></IonCol>
+                <IonCol size="3"><Card onClick={() => this.setState({ cards: this.state.cards + 1})} card_value="7"/></IonCol>
+                <IonCol size="3"><Card onClick={() => this.setState({ cards: this.state.cards + 1})} card_value="8"/></IonCol>
+                <IonCol size="3"><Card onClick={() => this.setState({ cards: this.state.cards + 1})} card_value="9"/></IonCol>
               </IonRow>
 
               <IonRow>
@@ -100,7 +100,7 @@ class Home extends React.Component {
                 <IonCol size="2.4"><Card onClick={() => this.handleClickDec()} card_value="A"/></IonCol>
               </IonRow>
             </IonGrid>
-            <IonButton onClick={() => this.setState({ count: 0, cards: 0})} color="dark" className="ion-padding ion-margin" expand="full">Reset counter</IonButton>
+            <IonButton onClick={() => this.setState({ count: 0, cards: 0})} color="dark" className="ion-padding ion-margin" expand="block" size="large">Reset counter</IonButton>
         </IonContent>
       </IonPage>
     );

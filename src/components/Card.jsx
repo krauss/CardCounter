@@ -6,9 +6,9 @@ import './Card.css';
 const Card = (props) => {
 
   return (
-    <IonCard>
-      <IonButton onClick={props.onClick} size="large" fill="outline" color="dark" expand="block"><b>{props.card_value}</b></IonButton>
-    </IonCard>
+      <IonCard className="my_card">
+        <IonButton className="my_button" onClick={props.onClick} size="large" fill="outline" color="dark" expand="block"><b>{props.card_value}</b></IonButton>
+      </IonCard>    
   );
 };
 

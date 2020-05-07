@@ -22,3 +22,11 @@
 .container a {
   text-decoration: none;
 }
+
+.my_card {
+  margin: 3px;
+}
+
+.my_button {
+  margin:2px;
+}
